@@ -1,39 +1,33 @@
 <!DOCTYPE html>
-
-<!DOCTYPE html>
-
-<html lang="pt_BR">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Joao Pedro - dowhile 2021</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-    />
+    <title>Cracha Pessoal</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
     <main>
-      <div class="content">
+      <div class="background">
+        <div class="keychain"></div>
+        <div class="hole"></div>
+      </div>
+      <div class="container">
         <div class="avatar">
           <span>
             <img src="images/build.svg" alt="Selo" />
           </span>
-
-          <img src="images/youtube.svg" alt="Foto Pessoal" id="idImagem" />
+          <img id="userPhoto" src="" alt="Foto pessoal" />
         </div>
-        <h1 id="userName">João Pedro Bandeira</h1>
-        <a id="idLink" href="https://github.com/joaopedro-wq" target="_blank">
-          <img src="images/github.svg " alt="icone github" />
-          <span id="idLogin"> Jotape Bandeira </span>
-        </a>
+        <h1 id="userName">Joao Pedro</h1>
+        <a id="userLink" href="https://github.com/joaopedro-wq" target="_blank"
+          ><img src="images/github.svg" alt="ícone do github" /><span
+            id="userLogin"
+            >DaniloSreis</span
+          ></a
+        >
         <p id="userBio">
-          Estudante de Ciências da computação, progamador front-end fullStack
+          An instructor focused on helping pople start programming for web
         </p>
         <ul id="socialLinks">
           <li class="linkedin">
@@ -41,34 +35,34 @@
               href="https://www.linkedin.com/in/jo%C3%A3o-pedro-oliveira-bandeira-01b83a205/"
               target="_blank"
             >
-              <img src="images/linkedln.png" alt="icone youtube" />
+              <img src="images/linkedln.png" alt="icone linkedin" />
             </a>
           </li>
-
-          <li class="facebook">
-            <a
-              href="https://www.facebook.com/joaopedro.oliveirabandeira/"
-              target="_blank"
-            >
-              <img src="images/facebook.svg" alt="icone facebook" />
-            </a>
-          </li>
-
-          <li class="twitter">
-            <a href="https://www.twitter.com/Chorab0y/" target="_blank">
-              <img src="images/twitter.svg" alt="icone twitter" />
-            </a>
-          </li>
-
           <li class="instagram">
-            <a href="https://www.instagram.com/jotapebandeira/" target="_blank">
-              <img src="images/instagram.svg" alt="icone instagram" />
-            </a>
+            <a href="https://instagram.com/" target="_blank"
+              ><img src="images/instagram.svg" alt="ícone do instagram"
+            /></a>
+          </li>
+          <li class="facebook">
+            <a href="https://facebook.com/" target="_blank"
+              ><img src="images/facebook.svg" alt="ícone do facebook"
+            /></a>
+          </li>
+          <li class="twitter">
+            <a href="https://twitter.com/" target="_blank"
+              ><img src="images/twitter.svg" alt="ícone do twitter"
+            /></a>
           </li>
         </ul>
       </div>
     </main>
-
     <script src="main.js"></script>
+    <script type="text/javascript" src="animacao.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelector('main'), {
+        max: 7,
+        speed: 300
+      })
+    </script>
   </body>
 </html>

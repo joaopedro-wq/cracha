@@ -1,12 +1,13 @@
 * {
-  margin: 0%;
+  margin: 0;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 html,
 body {
   --black: hsl(240, 6%, 13%);
   --grey: hsl(240, 9%, 89%);
-
   height: 100%;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -18,15 +19,16 @@ body {
 }
 
 main {
-  background: url(images/background.svg) no-repeat center/ cover;
+  background: url(images/background.svg) no-repeat center/cover;
   width: 100vw;
-  min-width: 812px;
-  height: 100vw;
+  min-height: 812px;
+  height: 100vh;
 }
-.content {
+
+.container {
   max-width: 250px;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
   text-align: center;
   color: var(--grey);
 }
@@ -47,7 +49,6 @@ main {
   width: 10rem;
   height: 11.5rem;
   object-fit: cover;
-
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 
@@ -69,11 +70,89 @@ a {
 p {
   margin-top: 2rem;
 }
+
 ul {
-  margin-top: 4rem;
+  margin-top: 2rem;
   list-style: none;
   padding: 0;
   display: flex;
   gap: 0.5rem;
   justify-content: center;
+}
+
+ul li a {
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  transform: translateY(-8px);
+}
+
+.container #userLink:hover {
+  animation: sacudir 2s ease 0s 1 alternate-reverse both;
+}
+
+@keyframes sacudir {
+  0%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+
+  15% {
+    transform: translateX(-30px) rotate(-6deg);
+  }
+
+  30% {
+    transform: translateX(15px) rotate(6deg);
+  }
+
+  45% {
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+
+  60% {
+    transform: translateX(9px) rotate(2.4deg);
+  }
+
+  75% {
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+
+@media (min-width: 720px) {
+  body {
+    background-color: #121214;
+    background-image: url(images/background-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  main {
+    width: 358px;
+    height: 541px;
+    min-height: 600px;
+    margin: auto;
+    color: var(--grey-white);
+    background: url(images/background.svg) no-repeat center/cover;
+  }
+  .container {
+    margin-top: -8rem;
+  }
+  .keychain {
+    background: linear-gradient(91.6deg, #00bfff 33.02%, #ffcd1e 78.83%);
+    width: 90px;
+    height: 740px;
+    position: absolute;
+    margin-top: -45rem;
+    margin-left: 8.9rem;
+    z-index: 2;
+  }
+  .hole {
+    position: absolute;
+    background: #121214;
+    width: 100px;
+    height: 8px;
+    margin-top: 18px;
+    margin-left: 137px;
+  }
 }
